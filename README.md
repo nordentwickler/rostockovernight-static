@@ -23,7 +23,16 @@ Site als statische Seite anlegen, Web Directory `/public`, Deploy Script nur `gi
 Die Seiten heißen `impressum.html`, die URLs aber `/impressum`. Dafür braucht die nginx-Config:
 
 ```
+rewrite ^/(.+)/$ /$1 permanent;
+
+location = / {
+    try_files /index.html =404;
+}
+
 location / {
-    try_files $uri $uri.html $uri/ =404;
+    try_files $uri $uri.html =404;
 }
 ```
+
+Die `rewrite` Zeile leitet alte Links mit Slash am Ende (`/impressum/`) weiter.
+Kein `$uri/` in `try_files`, sonst entsteht mit der `rewrite` Zeile eine Schleife bei Ordner-URLs.
