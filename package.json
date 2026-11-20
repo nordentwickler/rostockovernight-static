@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "description": "Website for übernachten-in-rostock.de",
   "scripts": {
-    "dev": "mix",
+    "build": "mix --production && node stamp-assets.mjs public",
     "watch": "mix watch",
-    "production": "mix --production"
+    "preview": "node preview.mjs"
   },
   "keywords": [],
   "author": "webhub GmbH",
