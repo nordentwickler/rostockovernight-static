@@ -1,0 +1,160 @@
+/**
+ *
+ * Generic typography
+ *
+ */
+
+/* syne-regular - latin */
+/* syne-regular - latin */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+  url('/assets/fonts/Syne-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('/assets/fontsSyne-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* syne-700 - latin */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+  url('/assets/fonts/Syne-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('/assets/Syne-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* syne-700 - latin */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local(''),
+  url('/assets/fonts/Syne-ExtraBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('/assets/fonts/Syne-ExtraBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* syne-700 - latin */
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(''),
+  url('/assets/fonts/Syne-SemiBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('/assets/fonts/Syne-SemiBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+h1, .h1{
+  @apply text-lg uppercase tracking-[-1px] font-bold;
+  @screen md{
+    @apply text-xl;
+  }
+  @screen xl{
+    @apply text-2xl;
+  }
+}
+
+h2{
+  @apply uppercase text-lg font-bold;
+  @screen xl{
+    @apply text-xl;
+  }
+}
+
+h2 + p,
+h2 + h3,
+p + h3
+{
+  @apply mt-6;
+  @screen lg{
+    @apply mt-10;
+  }
+}
+
+p + h2{
+  @apply mt-12;
+  @screen lg{
+    @apply mt-16;
+  }
+}
+
+h3 + p,
+{
+  @apply mt-4;
+  @screen lg{
+    @apply mt-8;
+  }
+}
+
+h3{
+  @apply text-lg;
+  @screen xl{
+    @apply text-xl;
+  }
+}
+
+.text h3{
+  @apply font-bold;
+}
+
+.text {
+  @apply text-lg;
+  @screen xl{
+    @apply text-xl;
+  }
+}
+
+.text p a{
+  @apply underline;
+}
+
+.text ol{
+  @apply my-4 pl-6;
+  @screen lg{
+    @apply my-8 pl-8;
+  }
+  li{
+    @apply list-disc leading-normal;
+  }
+}
+
+.text p + p, p + ul{
+  @apply mt-8;
+}
+
+.badge,
+.text ul li {
+  @apply text-base px-3 xl:px-4 py-0.5 xl:py-1 rounded-lg inline-flex items-center lining-nums;
+  @screen xl{
+    @apply text-lg;
+  }
+  svg{
+    @apply stroke-current w-auto h-4 shrink-0;
+    @screen xl{
+      @apply h-6;
+    }
+  }
+}
+
+.text ul li{
+  @apply mb-0 mr-1;
+  @screen xl{
+    @apply mb-2 mr-2;
+  }
+}
+
+.red .text ul li,
+.teal .text ul li {
+  @apply bg-blue-100;
+}
+
+.blue .text ul li {
+  @apply bg-red-100;
+}

@@ -1,0 +1,17 @@
+/**
+ *
+ * Button component
+ *
+ */
+
+.btn{
+  @apply py-2.5 px-7 rounded-lg text-base font-medium hover:opacity-75 transition ease-in-out delay-75;
+  @screen xl{
+    @apply text-lg;
+  }
+
+}
+
+.btn--primary{
+  @apply bg-teal-400 text-white;
+}
